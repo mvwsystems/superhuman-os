@@ -1,26 +1,54 @@
 @import "tailwindcss";
 
+@theme {
+  /* Operator surface */
+  --color-op-void:     #0A0908;
+  --color-op-ink:      #14130E;
+  --color-op-graphite: #23211C;
+  --color-op-bone:     #D8D3C8;
+  --color-op-paper:    #F1EDE5;
+  --color-op-dim:      #75716A;
+
+  /* Notebook surface */
+  --color-cr-cream:    #EDE6D2;
+  --color-cr-page:     #F5EFDC;
+  --color-cr-binding:  #1A1612;
+  --color-cr-warm:     #5B4A36;
+  --color-cr-rule:     #C9BFA3;
+
+  /* Signal */
+  --color-signal:      #C84B1D;
+
+  /* Fonts */
+  --font-sans: var(--font-plex-sans), 'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono: var(--font-plex-mono), 'IBM Plex Mono', monospace;
+}
+
+/* Short-name CSS custom properties for inline styles and non-Tailwind CSS */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --op-void:     #0A0908;
+  --op-ink:      #14130E;
+  --op-graphite: #23211C;
+  --op-bone:     #D8D3C8;
+  --op-paper:    #F1EDE5;
+  --op-dim:      #75716A;
+
+  --cr-cream:    #EDE6D2;
+  --cr-page:     #F5EFDC;
+  --cr-binding:  #1A1612;
+  --cr-warm:     #5B4A36;
+  --cr-rule:     #C9BFA3;
+
+  --signal:      #C84B1D;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--op-void);
+  color: var(--op-paper);
+  font-family: var(--font-sans);
 }
